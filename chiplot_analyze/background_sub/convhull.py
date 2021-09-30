@@ -1,7 +1,7 @@
 # basic imports
 from chiplot_analyze.dlog import dlog
 from chiplot_analyze.chiplot import Chiplot
-import tkFileDialog, os
+import tkinter.filedialog, os
 
 def convexHull(chiplot):
 	"""method that computes the convex hull of the given chiplot within
@@ -44,7 +44,7 @@ def convexHull(chiplot):
 def outputHull(xhull, yhull, filename):
 	"""outputs the two lists in a csv format"""
 	dlog('in output hull of convex hull')
-	hullfilename = tkFileDialog.asksaveasfilename(initialdir = os.path.dirname(filename), initialfile = os.path.basename(filename)+'.hull', title = 'Convex Hull Points')
+	hullfilename = tkinter.filedialog.asksaveasfilename(initialdir = os.path.dirname(filename), initialfile = os.path.basename(filename)+'.hull', title = 'Convex Hull Points')
 	if hullfilename == '':
 		return 0
 	wfile = open( hullfilename, "w")

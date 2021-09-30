@@ -1,6 +1,6 @@
 # basic imports
-from Tkinter import *
-import os, tkFileDialog
+from tkinter import *
+import os, tkinter.filedialog
 from chiplot_analyze.dlog import dlog, errorMessage
 from chiplot_analyze.chiplot import Chiplot
 
@@ -270,7 +270,7 @@ class Splitter:
 		
 	
 	def customFiles(self):
-		filenamel = tkFileDialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), initialfile = os.path.basename(self.chiplot.filename)+'l.xy',title = 'Left Chiplot Split')
+		filenamel = tkinter.filedialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), initialfile = os.path.basename(self.chiplot.filename)+'l.xy',title = 'Left Chiplot Split')
 		if filenamel == '':
 			return
 		# destroy message box
@@ -282,7 +282,7 @@ class Splitter:
 				'Chiplot split but unable to output files correctly',
 				'Unable to output left side of chiplot: '+self.chiplot.filename)
 			return
-		filenamer = tkFileDialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), initialfile = os.path.basename(self.chiplot.filename)+'r.xy',title = 'Right Chiplot Split')
+		filenamer = tkinter.filedialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), initialfile = os.path.basename(self.chiplot.filename)+'r.xy',title = 'Right Chiplot Split')
 		if filenamer != '':
 			if self.rightChi.writeFile(True, '', filenamer) == 0:
 				dlog('Split chiplot into: '+filenamer+' and '+filenamel, 'l')

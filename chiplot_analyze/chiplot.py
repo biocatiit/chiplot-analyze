@@ -1,6 +1,6 @@
 # basic imports
 import re
-from dlog import dlog
+from .dlog import dlog
 
 class Chiplot:
 	def __init__(self, xdata = list(), ydata = list(), filename = None, projection = ''):

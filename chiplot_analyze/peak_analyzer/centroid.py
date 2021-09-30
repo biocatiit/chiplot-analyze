@@ -1,6 +1,6 @@
 # basic imports
-from Tkinter import *
-import os, tkFileDialog, re
+from tkinter import *
+import os, tkinter.filedialog, re
 from chiplot_analyze.dlog import dlog
 from chiplot_analyze.chiplot import Chiplot
 
@@ -95,7 +95,7 @@ class Centroid:
 		while(self.logfile == None):
 			dlog('setting logfile')
 			#while(logre.search(str(logfilename))==None):
-			logfilename = tkFileDialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), title = 'Peak Analyzation Logfile') ##
+			logfilename = tkinter.filedialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), title = 'Peak Analyzation Logfile') ##
 			dlog("logfile: "+str(logfilename)) ##
 			if logfilename == '':
 				dlog("logfilename equaled ''")

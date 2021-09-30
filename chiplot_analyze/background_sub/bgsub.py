@@ -1,11 +1,11 @@
 # basic imports
-from Tkinter import *
-import os, tkFileDialog
+from tkinter import *
+import os, tkinter.filedialog
 from chiplot_analyze.dlog import dlog
 from chiplot_analyze.chiplot import Chiplot
-from convhull import convexHull, outputHull
-from spline import splineChiplot
-from pchip import pchipChiplot
+from .convhull import convexHull, outputHull
+from .spline import splineChiplot
+from .pchip import pchipChiplot
 
 class BackgroundSub:
 	def __init__(self, chiplot, window, canvas, fig, prompt, centButton, smooth = 'spline'):
@@ -382,7 +382,7 @@ class BackgroundSub:
 			dlog('Outputing background subtraction to '+self.chiplot.filename+'.bak')
 	
 	def customFiles(self):
-		filename = tkFileDialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), initialfile = os.path.basename(self.chiplot.filename)+'.bak', title = 'Background Subtracted Chiplot')
+		filename = tkinter.filedialog.asksaveasfilename(initialdir = os.path.dirname(self.chiplot.filename), initialfile = os.path.basename(self.chiplot.filename)+'.bak', title = 'Background Subtracted Chiplot')
 		if filename == '':
 			return
 		self.dialogWindow.destroy()
