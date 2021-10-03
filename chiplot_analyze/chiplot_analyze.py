@@ -45,7 +45,7 @@ class mainClass:
 		self.fig = Figure(figsize = (width, height), dpi=100)
 		self.plotCanvas = FigureCanvasTkAgg(self.fig, self.root)
 		self.plotCanvas.get_tk_widget().grid(row = 2, columnspan = 5)
-		self.plotCanvas.show()
+		self.plotCanvas.draw()
 
 		# create a prompt label with related varible
 		self.prompt = StringVar()
