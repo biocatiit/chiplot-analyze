@@ -121,7 +121,7 @@ def splint(xa, ya, y2a, N, x, y):
 	#klo and khi now bracket the input value of x
 	h=xa[khi]-xa[klo]
 	if (h==0):
-		print "Bad input.  The xa's must be distinct"
+		print("Bad input.  The xa's must be distinct")
 	
 	#now the cubic spline polynomial is evaluated
 	A=(xa[khi]-x)/h

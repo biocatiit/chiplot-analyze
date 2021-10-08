@@ -1,5 +1,5 @@
 # imports to enable Topleve()
-from Tkinter import *
+from tkinter import *
 
 def setDebug(debugLevel = 0):
 	global _debug
@@ -7,9 +7,9 @@ def setDebug(debugLevel = 0):
 
 def dlog(string, debug='d'):
 	if (debug == 'l'):
-		print string
+		print(string)
 	elif(_debug > 0):
-		print 'debug: '+string
+		print('debug: '+string)
 
 def errorMessage(command, ignoreCommand, title, messageString, errorString):
 	window = Toplevel()
