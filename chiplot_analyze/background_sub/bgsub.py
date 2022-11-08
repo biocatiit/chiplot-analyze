@@ -148,6 +148,8 @@ class BackgroundSub:
 				self.leftedge = event.xdata
 			elif event.xdata > middle:
 				self.rightedge = event.xdata
+		if self.leftedge < 1:
+			self.leftedge = 1
 		self.add.cla()
 		self.add.plot(self.chiplot.xdata, self.chiplot.ydata)
 		self.add.plot([self.leftedge,self.leftedge], [self.chiplot.ymin, self.chiplot.ymax], color = 'r')
@@ -184,7 +186,7 @@ class BackgroundSub:
 		hullxplot = self.chiplot.xdata[left:right]
 		hullyplot = self.chiplot.ydata[left:right]
 		# blot out the large peaks
-		for i in range(0,len(self.peaks)/2):
+		for i in range(0,len(self.peaks)//2-1):
 			lower = self.peaks[i*2]
 			upper = self.peaks[i*2+1]
 			for i in range(0, len(self.chiplot.xdata)):

@@ -107,7 +107,7 @@ class Splitter:
 		# find center
 		centers = list()
 		peakIndexTop = len(self.peaks)-1
-		for i in range(0,(len(self.peaks)+1)/2):
+		for i in range(0,(len(self.peaks)+1)//2):
 			centers.append((self.peaks[i] + self.peaks[peakIndexTop - i])/2.0)
 		# calculate the range of the peak centers to determine
 		if len(centers) == 0:

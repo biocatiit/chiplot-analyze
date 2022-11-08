@@ -38,7 +38,7 @@ with open(path.join(fpath, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='chiplot-analyze',
-    version='0.9.7',
+    version='0.9.8',
     description='A general purpose GUI application used to analyze chiplots.',
     long_description=long_description,
     url='https://github.com/biocatiit/Chiplot-analyze',
@@ -50,8 +50,8 @@ setup(
         # 'Topic :: Utilities',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 2 :: Only',
-        # 'Programming Language :: Python :: 3',
+        # 'Programming Language :: Python :: 2 :: Only',
+        'Programming Language :: Python :: 3',
     ],
     keywords='chiplot analyze',
     # project_urls={},
