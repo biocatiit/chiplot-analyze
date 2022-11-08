@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Chiplot-Analyze
+GenericName=chiplot-analyze
+Exec=/usr/bin/chiplot_analyze/chiplot_analyze.py
+Terminal=false
+Type=Application
+Icon=/usr/share/icons/AppIcon.icns
+Encoding=UTF-8
+Categories=Science;Biology;Physics
+

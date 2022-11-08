@@ -12,11 +12,11 @@ from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 # import the splitter routines
-from .dlog import *
-from .splitter.splitter import Splitter
-from .background_sub.bgsub import BackgroundSub
-from .peak_analyzer.centroid import Centroid
-from .chiplot import Chiplot
+from chiplot_analyze.dlog import *
+from chiplot_analyze.splitter.splitter import Splitter
+from chiplot_analyze.background_sub.bgsub import BackgroundSub
+from chiplot_analyze.peak_analyzer.centroid import Centroid
+from chiplot_analyze.chiplot import Chiplot
 
 print('Python Version', sys.version)
 

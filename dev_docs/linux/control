@@ -1,0 +1,7 @@
+Source: chiplot-analyze
+Package: chiplot-analyze
+Version: 0.9.8
+Priority: optional
+Architecture: amd64
+Maintainer: BioCAT Laboratory <biocat@lethocerus.biol.iit.edu>
+Description: Chiplot Analyze
