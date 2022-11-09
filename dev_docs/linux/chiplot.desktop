@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.0
 Name=Chiplot-Analyze
-GenericName=chiplot-analyze
-Exec=/usr/bin/chiplot_analyze/chiplot_analyze.py
+GenericName=chiplotanalyze
+Exec=/usr/bin/chiplot_analyze/chiplot-analyze
 Terminal=false
 Type=Application
 Icon=/usr/share/icons/AppIcon.icns
