@@ -11,19 +11,19 @@ os.sys.path.append(os.path.abspath(os.path.join('..', '..')))
 deb_path = os.path.join('.', 'chiplot-analyze-{}_amd64(linux)'.format(version),
     'DEBIAN')
 exc_path = os.path.join('.', 'chiplot-analyze-{}_amd64(linux)'.format(version),
-    'usr', 'bin', 'chiplot_analyze')
+    'usr', 'bin')
 app_path = os.path.join('.', 'chiplot-analyze-{}_amd64(linux)'.format(version),
     'usr', 'share', 'applications')
 png_path = os.path.join('.', 'chiplot-analyze-{}_amd64(linux)'.format(version),
     'usr', 'share', 'icons')
 
 os.makedirs(deb_path, exist_ok=True)
-# os.makedirs(exc_path, exist_ok=True)
+os.makedirs(exc_path, exist_ok=True)
 os.makedirs(app_path, exist_ok=True)
 os.makedirs(png_path, exist_ok=True)
 
 shutil.copy('control', deb_path)
-shutil.copytree(os.path.join('..', '..', 'dist', 'chiplot-analyze'), exc_path)
+shutil.copy(os.path.join('..', '..', 'dist', 'chiplot-analyze'), exc_path)
 shutil.copy('chiplot.desktop', app_path)
 shutil.copy('AppIcon.icns', os.path.join(png_path, 'AppIcon.icns'))
 
